@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="gallery-container">
+    <h1>IMAGE GALLERY</h1>
+    <h2>Explore the Stunning Visual Collection</h2>
+    <p>Welcome to our interactive image gallery, where every picture tells a story. <br /> Navigate through the gallery using thumbnails, enjoy a full-screen experience with our lightbox feature, and immerse yourself in the beauty of each capture.</p>
+  
+    <div class="gallery" id="gallery">
+        <!-- Main Images -->
+        <div class="gallery-item" style="background-image: url('./Assets/image1.jpg');" onclick="openLightbox(0)">
+            <div class="image-title">1</div>
+        </div>
+        <div class="gallery-item" style="background-image: url('./Assets/image2.jpg');" onclick="openLightbox(1)">
+            <div class="image-title">2</div>
+        </div>
+        <div class="gallery-item" style="background-image: url('./Assets/image3.jpg');" onclick="openLightbox(2)">
+            <div class="image-title">3</div>
+        </div>
+        <div class="gallery-item" style="background-image: url('./Assets/image4.jpg');" onclick="openLightbox(3)">
+            <div class="image-title">4</div>
+        </div>
+        <div class="gallery-item" style="background-image: url('./Assets/image5.jpg');" onclick="openLightbox(4)">
+            <div class="image-title">5</div>
+        </div>
+        <!-- Add more gallery items as needed -->
+    </div>
+
+    <!-- Thumbnail Navigation -->
+    <div class="thumbnail-container">
+        <div class="thumbnail-item" style="background-image: url('./Assets/image1.jpg');" onclick="jumpToImage(0)"></div>
+        <div class="thumbnail-item" style="background-image: url('./Assets/image2.jpg');" onclick="jumpToImage(1)"></div>
+        <div class="thumbnail-item" style="background-image: url('./Assets/image3.jpg');" onclick="jumpToImage(2)"></div>
+        <div class="thumbnail-item" style="background-image: url('./Assets/image4.jpg');" onclick="jumpToImage(3)"></div>
+        <div class="thumbnail-item" style="background-image: url('./Assets/image5.jpg');" onclick="jumpToImage(4)"></div>
+        <!-- Add more thumbnails as needed -->
+    </div>
+</div>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <span class="close-btn">&times;</span>
+    <img id="lightbox-img" class="lightbox-content">
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
